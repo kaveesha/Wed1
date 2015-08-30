@@ -36,10 +36,13 @@ import java.util.ArrayList;
 
 public class AddNewGuest extends ActionBarActivity {
 
-    int code,sideindex,invitesentindex,attentdingindex;
+    int code;
     String line;
     InputStream is;
     String Fname, Lname, result, Tableseatno, Side, InviteSent, Attending;
+    String sideindex ="Bride";
+    String attentdingindex="Yes";
+    String invitesentindex="Yes";
     // RadioGroup InviteSent,Attending;
 
     @Override
@@ -65,40 +68,8 @@ public class AddNewGuest extends ActionBarActivity {
                 Fname = fname.getText().toString();
                 Lname = lname.getText().toString();
                 Tableseatno = tsno.getText().toString();
-                sideindex =  side.getCheckedRadioButtonId();
-                if(sideindex==0)
-                {
-                    Side = "Bride";
-                }
-                else
-                {
-                    Side = "Groom";
-                }
-                invitesentindex = invitesent.getCheckedRadioButtonId();
-                if(invitesentindex==0)
-                {
-                    InviteSent = "Yes";
-                }
-                else
-                {
-                     InviteSent = "No";
-                }
-                attentdingindex = attending.getCheckedRadioButtonId();
-                if(attentdingindex==0)
-                {
-                    Attending = "Yes";
-                }
-                else if(attentdingindex ==1)
-                {
 
-                    Attending = "No";
-                }
-                else
-                {
-                   Attending = "Undecided";
-                }
-
-                new SomeTask().execute();
+               new SomeTask().execute();
 
             }
         });
@@ -157,6 +128,43 @@ public class AddNewGuest extends ActionBarActivity {
 //    }
 //}
 
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.radioBride:
+                if (checked)
+                   sideindex  = "Bride";
+                    break;
+            case R.id.radioGroom:
+                if (checked)
+                    sideindex  = "Groom";
+                    break;
+            case R.id.radioButtonAttendingYes:
+                if (checked)
+                    attentdingindex  = "Yes";
+                break;
+            case R.id.radioButtonAttendingNo:
+                if (checked)
+                    attentdingindex  = "No";
+                break;
+            case R.id.radioButtonAttendingUndecided:
+                if (checked)
+                    attentdingindex  = "Undecided";
+                break;
+            case R.id.radioButtonInvitesYes:
+                if (checked)
+                    invitesentindex  = "Yes";
+                break;
+            case R.id.radioButtonInvitesNo:
+                if (checked)
+                    invitesentindex  = "No";
+                break;
+
+        }
+    }
 
     public void addnewguest() {
 
@@ -165,9 +173,9 @@ public class AddNewGuest extends ActionBarActivity {
         nameValuePairs.add(new BasicNameValuePair("firstname", Fname));
         nameValuePairs.add(new BasicNameValuePair("lastname", Lname));
         nameValuePairs.add(new BasicNameValuePair("tableseatno", Tableseatno));
-        nameValuePairs.add(new BasicNameValuePair("side",Side));
-        nameValuePairs.add(new BasicNameValuePair("invitesent",InviteSent));
-        nameValuePairs.add(new BasicNameValuePair("attending",Attending));
+        nameValuePairs.add(new BasicNameValuePair("side",sideindex));
+        nameValuePairs.add(new BasicNameValuePair("invitesent",invitesentindex));
+        nameValuePairs.add(new BasicNameValuePair("attending",attentdingindex));
 
 
         try {

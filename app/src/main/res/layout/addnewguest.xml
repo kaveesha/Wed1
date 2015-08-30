@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:inputType="textPersonName"
-        android:text="First Name"
+        android:hint="First Name"
         android:ems="10"
         android:id="@+id/editText_Fname"
         android:layout_marginLeft="20dp"
@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:inputType="textPersonName"
-        android:text="Last Name"
+        android:hint="Last Name"
         android:ems="10"
         android:id="@+id/editText_Lname"
         android:layout_marginLeft="20dp"
@@ -58,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:inputType="textPersonName"
-        android:text="Table Seat No"
+        android:hint="Table Seat No"
         android:ems="10"
         android:id="@+id/editText_SeatNo"
         android:layout_marginLeft="20dp"
@@ -210,13 +210,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_Bride"
-            android:checked="true" />
+            android:checked="true"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/radioGroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radio_Groom" />
+            android:text="@string/radio_Groom"
+            android:onClick="onRadioButtonClicked"/>
 
     </RadioGroup>
 
@@ -258,13 +260,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_InvitesYes"
-            android:checked="true" />
+            android:checked="true"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/radioButtonInvitesNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radio_InvitesNo" />
+            android:text="@string/radio_InvitesNo"
+            android:onClick="onRadioButtonClicked"/>
 
     </RadioGroup>
 
@@ -287,26 +291,30 @@
         android:layout_below="@+id/textView_Attending"
         android:orientation="horizontal"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="1dp">
+        android:layout_marginTop="1dp"
+        android:onClick="onRadioButtonClicked">
 
         <RadioButton
             android:id="@+id/radioButtonAttendingYes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_AttendingYes"
-            android:checked="true" />
+            android:checked="true"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/radioButtonAttendingNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radio_AttendingNo" />
+            android:text="@string/radio_AttendingNo"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/radioButtonAttendingUndecided"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radio_AttendingUndecided" />
+            android:text="@string/radio_AttendingUndecided"
+            android:onClick="onRadioButtonClicked"/>
 
     </RadioGroup>
 
