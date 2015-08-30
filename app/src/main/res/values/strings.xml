@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Wed1</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="radio_Bride">Bride</string>
+    <string name="radio_Groom">Groom</string>
+    <string name="radio_InvitesYes">Yes</string>
+    <string name="radio_InvitesNo">No</string>
+    <string name="radio_AttendingYes">Yes</string>
+    <string name="radio_AttendingNo">No</string>
+    <string name="radio_AttendingUndecided">Undecided</string>
+    <!--<string name="btn_display">Display</string>-->
+
+</resources>

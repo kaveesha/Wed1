@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="#CF71AF">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Guest name"
+        android:textSize="15dp"
+        android:id="@+id/textView_GuestName"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:inputType="textPersonName"
+        android:text="First Name"
+        android:ems="10"
+        android:id="@+id/editText_Fname"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/textView_GuestName"
+
+        android:background="#FFFFFF"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:inputType="textPersonName"
+        android:text="Last Name"
+        android:ems="10"
+        android:id="@+id/editText_Lname"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/editText_Fname"
+        android:background="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/editText_Lname"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Table Seat No"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView_SeatNo"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:inputType="textPersonName"
+        android:text="Table Seat No"
+        android:ems="10"
+        android:id="@+id/editText_SeatNo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/textView_SeatNo"
+        android:background="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/editText_SeatNo"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Side"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView_Side"
+        />
+
+
+    <!--<RadioButton-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_below="@+id/textView_Side"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:id="@+id/radioButton_Bride"-->
+        <!--android:layout_marginTop="1dp"-->
+        <!--/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_below="@+id/textView_Side"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:text="Bride"-->
+        <!--android:textSize="20dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:id="@+id/textView_Bride"-->
+        <!--android:layout_toRightOf="@+id/radioButton_Bride"-->
+        <!--/>-->
+
+    <!--<RadioButton-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_below="@+id/textView_Side"-->
+       <!--android:layout_toRightOf="@+id/textView_Bride"-->
+        <!--android:id="@+id/radioButton_Groom"-->
+        <!--android:layout_marginTop="1dp"-->
+        <!--/>-->
+
+
+
+    <!--<TextView-->
+        <!--android:layout_width="70dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_below="@+id/textView_Side"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:text="Groom"-->
+        <!--android:textSize="20dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:id="@+id/textView_Groom"-->
+        <!--android:layout_toRightOf="@+id/radioButton_Groom"-->
+        <!--/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_below="@+id/radioButton_Bride"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:text="RSVP"-->
+        <!--android:textSize="20dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:id="@+id/textView_RSVP"-->
+        <!--/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_below="@+id/textView_RSVP"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:text="Invites Sent"-->
+        <!--android:textSize="20dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:id="@+id/textView_InvitesSent"-->
+        <!--/>-->
+
+    <!--<RadioButton-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_below="@+id/textView_InvitesSent"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:id="@+id/radioButton_InviteYes"-->
+        <!--android:layout_marginTop="1dp"-->
+        <!--/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_below="@+id/textView_InvitesSent"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:text="Yes"-->
+        <!--android:textSize="20dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:id="@+id/textView_InviteYes"-->
+        <!--android:layout_toRightOf="@+id/radioButton_InviteYes"-->
+        <!--/>-->
+
+    <!--<RadioButton-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_below="@+id/textView_InvitesSent"-->
+        <!--android:layout_toRightOf="@+id/textView_Bride"-->
+        <!--android:id="@+id/radioButton_InviteNo"-->
+        <!--android:layout_marginTop="1dp"-->
+        <!--/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="70dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_below="@+id/textView_InvitesSent"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:text="No"-->
+        <!--android:textSize="20dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:id="@+id/textView_InviteNo"-->
+        <!--android:layout_toRightOf="@+id/radioButton_InviteNo"-->
+        <!--/>-->
+
+    <RadioGroup
+        android:id="@+id/radioSide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_Side"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="1dp">
+
+        <RadioButton
+            android:id="@+id/radioBride"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_Bride"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioGroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_Groom" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/radioSide"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="RSVP"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView_RSVP"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/textView_RSVP"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Invites Sent"
+        android:textSize="15dp"
+        android:layout_marginTop="1dp"
+        android:id="@+id/textView_InvitesSent"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioInvitesSent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_InvitesSent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="1dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonInvitesYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_InvitesYes"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioButtonInvitesNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_InvitesNo" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/radioInvitesSent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Attending "
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView_Attending"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioAttending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_Attending"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="1dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonAttendingYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_AttendingYes"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAttendingNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_AttendingNo" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAttendingUndecided"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_AttendingUndecided" />
+
+    </RadioGroup>
+
+    <!--<Button-->
+        <!--android:id="@+id/btnDisplay"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/btn_display"-->
+        <!--/>-->
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:id="@+id/Button_OK"
+        android:layout_below="@+id/radioAttending"
+        android:layout_marginLeft="20dp"
+
+        android:text="OK"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:id="@+id/Button_Cancel"
+        android:layout_below="@+id/radioAttending"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/Button_OK"
+        android:text="Cancel"/>
+
+</RelativeLayout>
