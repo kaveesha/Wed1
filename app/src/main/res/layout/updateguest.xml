@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="#CF71AF">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Guest name"
+        android:textSize="15dp"
+        android:id="@+id/textView_UGuestName"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:inputType="textPersonName"
+        android:text="First Name"
+        android:ems="10"
+        android:id="@+id/editText_UFname"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/textView_UGuestName"
+
+        android:background="#FFFFFF"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:inputType="textPersonName"
+        android:text="Last Name"
+        android:ems="10"
+        android:id="@+id/editText_ULname"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/editText_UFname"
+        android:background="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/editText_ULname"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Table Seat No"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView_USeatNo"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:inputType="textPersonName"
+        android:text="Table Seat No"
+        android:ems="10"
+        android:id="@+id/editText_USeatNo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/textView_USeatNo"
+        android:background="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/editText_USeatNo"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Side"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView_USide"
+        />
+
+
+    <RadioGroup
+        android:id="@+id/UradioSide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_USide"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="1dp">
+
+        <RadioButton
+            android:id="@+id/UradioBride"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_Bride"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/UradioGroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_Groom" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/UradioSide"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="RSVP"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView_URSVP"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/textView_URSVP"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Invites Sent"
+        android:textSize="15dp"
+        android:layout_marginTop="1dp"
+        android:id="@+id/textView_UInvitesSent"
+        />
+
+    <RadioGroup
+        android:id="@+id/UradioInvitesSent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_UInvitesSent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="1dp">
+
+        <RadioButton
+            android:id="@+id/UradioButtonInvitesYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_InvitesYes"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/UradioButtonInvitesNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_InvitesNo" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/UradioInvitesSent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Attending "
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView_UAttending"
+        />
+
+    <RadioGroup
+        android:id="@+id/UradioAttending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_UAttending"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="1dp">
+
+        <RadioButton
+            android:id="@+id/UradioButtonAttendingYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_AttendingYes"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/UradioButtonAttendingNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_AttendingNo" />
+
+        <RadioButton
+            android:id="@+id/UradioButtonAttendingUndecided"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_AttendingUndecided" />
+
+    </RadioGroup>
+
+    <!--<Button-->
+    <!--android:id="@+id/btnDisplay"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/btn_display"-->
+    <!--/>-->
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:id="@+id/Button_UOK"
+        android:layout_below="@+id/UradioAttending"
+        android:layout_marginLeft="20dp"
+
+        android:text="OK"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:id="@+id/Button_UCancel"
+        android:layout_below="@+id/UradioAttending"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/Button_UOK"
+        android:text="Cancel"/>
+
+</RelativeLayout>

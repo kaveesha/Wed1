@@ -172,7 +172,7 @@ public class AddNewGuest extends ActionBarActivity {
 
         try {
             HttpClient httpclient = new DefaultHttpClient();
-            HttpPost httppost = new HttpPost("http://mywedding.byethost4.com/wedding/AddNewGuest.php");
+            HttpPost httppost = new HttpPost("http://weddingres.site11.com/kaveesha/AddNewGuest.php");
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
             HttpResponse response = httpclient.execute(httppost);
             HttpEntity entity = response.getEntity();
