@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.sep.wed1.MyGuestList"
+    android:background="#CF71AF"
+    >
+
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Search"
+        android:textSize="15dp"
+        android:id="@+id/textView_Search"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/editText_Search"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/textView_Search"
+        android:background="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Sort"
+        android:textSize="15dp"
+        android:id="@+id/textView_Sort"
+        android:layout_below="@+id/textView_Search"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/spinner_sort"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/editText_Search"
+        android:layout_toRightOf="@+id/textView_Search">
+
+    </Spinner>
+
+</RelativeLayout>

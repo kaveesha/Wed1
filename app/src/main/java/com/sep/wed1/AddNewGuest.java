@@ -50,7 +50,8 @@ public class AddNewGuest extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.addnewguest);
 
-        final EditText fname = (EditText) findViewById(R.id.editText_Fname); final RadioGroup side = (RadioGroup) findViewById(R.id.radioSide);
+        final EditText fname = (EditText) findViewById(R.id.editText_Fname);
+        final RadioGroup side = (RadioGroup) findViewById(R.id.radioSide);
         final RadioGroup invitesent = (RadioGroup) findViewById(R.id.radioInvitesSent);
         final RadioGroup attending = (RadioGroup) findViewById(R.id.radioAttending);
 
@@ -88,45 +89,6 @@ public class AddNewGuest extends ActionBarActivity {
 
     }
 
-//        final GuestInfoDB db = new GuestInfoDB(this);
-//
-//
-//
-//       // addListenerOnButton();
-//
-//
-////        bride = (RadioButton)findViewById(R.id.radioButton_Bride);
-////        Bride = (TextView)findViewById(R.id.textView_Bride);
-////        groom = (RadioButton)findViewById(R.id.radioButton_Bride);
-////        Groom = (TextView)findViewById(R.id.textView_Groom);
-//        RadioSide = (RadioGroup) findViewById(R.id.radioSide);
-//        InvitesSent = (RadioGroup)findViewById(R.id.radioInvitesSent);
-//        Attending = (RadioGroup)findViewById(R.id.radioAttending);
-//        Ok = (Button)findViewById(R.id.Button_OK);
-//
-//        Ok.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                GuestName = (TextView)findViewById(R.id.textView_GuestName);
-//                Fname = (EditText)findViewById(R.id.editText_Fname);
-//                Lname = (EditText)findViewById(R.id.editText_Lname);
-//                TableSeatNo = (TextView)findViewById(R.id.textView_SeatNo);
-//                SeatNo = (EditText)findViewById(R.id.editText_SeatNo);
-//                Side = (TextView)findViewById(R.id.textView_Side);
-//
-//
-//
-//            }
-//        });
-//
-//        Cancel = (Button)findViewById(R.id.Button_Cancel);
-//    }
-//
-//
-//
-//    }
-//}
 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?

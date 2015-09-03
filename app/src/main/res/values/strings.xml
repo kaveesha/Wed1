@@ -11,6 +11,10 @@
     <string name="radio_AttendingYes">Yes</string>
     <string name="radio_AttendingNo">No</string>
     <string name="radio_AttendingUndecided">Undecided</string>
+    <string name="title_activity_update_guest">UpdateGuest</string>
+    <string name="title_activity_listview">listview</string>
+    <string name="title_activity_my_guest_list">MyGuestList</string>
+    <string name="title_activity_delete_guest">DeleteGuest</string>
     <!--<string name="btn_display">Display</string>-->
 
 </resources>

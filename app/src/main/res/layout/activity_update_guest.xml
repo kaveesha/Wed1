@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:weightSum="1"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.sep.wed1.UpdateGuest"
     android:background="#CF71AF">
 
     <TextView
@@ -13,7 +15,7 @@
         android:layout_marginLeft="20dp"
         android:text="Guest name"
         android:textSize="15dp"
-        android:id="@+id/textView_GuestName"
+        android:id="@+id/UtextView_GuestName"
         />
 
     <EditText
@@ -22,10 +24,10 @@
         android:inputType="textPersonName"
         android:hint="First Name"
         android:ems="10"
-        android:id="@+id/editText_Fname"
+        android:id="@+id/UeditText_Fname"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_below="@+id/textView_GuestName"
+        android:layout_below="@+id/UtextView_GuestName"
 
         android:background="#FFFFFF"/>
 
@@ -35,23 +37,23 @@
         android:inputType="textPersonName"
         android:hint="Last Name"
         android:ems="10"
-        android:id="@+id/editText_Lname"
+        android:id="@+id/UeditText_Lname"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/editText_Fname"
+        android:layout_below="@+id/UeditText_Fname"
         android:background="#FFFFFF"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="25dp"
-        android:layout_below="@+id/editText_Lname"
+        android:layout_below="@+id/UeditText_Lname"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:text="Table Seat No"
         android:textSize="15dp"
         android:layout_marginTop="10dp"
-        android:id="@+id/textView_SeatNo"
+        android:id="@+id/UtextView_SeatNo"
         />
 
     <EditText
@@ -60,39 +62,37 @@
         android:inputType="textPersonName"
         android:hint="Table Seat No"
         android:ems="10"
-        android:id="@+id/editText_SeatNo"
+        android:id="@+id/UeditText_SeatNo"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="1dp"
-        android:layout_below="@+id/textView_SeatNo"
+        android:layout_below="@+id/UtextView_SeatNo"
         android:background="#FFFFFF"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="25dp"
-        android:layout_below="@+id/editText_SeatNo"
+        android:layout_below="@+id/UeditText_SeatNo"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:text="Side"
         android:textSize="15dp"
         android:layout_marginTop="10dp"
-        android:id="@+id/textView_Side"
+        android:id="@+id/UtextView_Side"
         />
 
 
-
-
     <RadioGroup
-        android:id="@+id/radioSide"
+        android:id="@+id/UradioSide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_Side"
+        android:layout_below="@+id/UtextView_Side"
         android:orientation="horizontal"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="1dp">
 
         <RadioButton
-            android:id="@+id/radioBride"
+            android:id="@+id/UradioBride"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_Bride"
@@ -100,7 +100,7 @@
             android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
-            android:id="@+id/radioGroom"
+            android:id="@+id/UradioGroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_Groom"
@@ -111,38 +111,38 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="25dp"
-        android:layout_below="@+id/radioSide"
+        android:layout_below="@+id/UradioSide"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:text="RSVP"
         android:textSize="15dp"
         android:layout_marginTop="10dp"
-        android:id="@+id/textView_RSVP"
+        android:id="@+id/UtextView_RSVP"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="25dp"
-        android:layout_below="@+id/textView_RSVP"
+        android:layout_below="@+id/UtextView_RSVP"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:text="Invites Sent"
         android:textSize="15dp"
         android:layout_marginTop="1dp"
-        android:id="@+id/textView_InvitesSent"
+        android:id="@+id/UtextView_InvitesSent"
         />
 
     <RadioGroup
-        android:id="@+id/radioInvitesSent"
+        android:id="@+id/UradioInvitesSent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_InvitesSent"
+        android:layout_below="@+id/UtextView_InvitesSent"
         android:orientation="horizontal"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="1dp">
 
         <RadioButton
-            android:id="@+id/radioButtonInvitesYes"
+            android:id="@+id/UradioButtonInvitesYes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_InvitesYes"
@@ -150,7 +150,7 @@
             android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
-            android:id="@+id/radioButtonInvitesNo"
+            android:id="@+id/UradioButtonInvitesNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_InvitesNo"
@@ -161,27 +161,27 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="25dp"
-        android:layout_below="@+id/radioInvitesSent"
+        android:layout_below="@+id/UradioInvitesSent"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:text="Attending "
         android:textSize="15dp"
         android:layout_marginTop="10dp"
-        android:id="@+id/textView_Attending"
+        android:id="@+id/UtextView_Attending"
         />
 
     <RadioGroup
-        android:id="@+id/radioAttending"
+        android:id="@+id/UradioAttending"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_Attending"
+        android:layout_below="@+id/UtextView_Attending"
         android:orientation="horizontal"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="1dp"
         android:onClick="onRadioButtonClicked">
 
         <RadioButton
-            android:id="@+id/radioButtonAttendingYes"
+            android:id="@+id/UradioButtonAttendingYes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_AttendingYes"
@@ -189,14 +189,14 @@
             android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
-            android:id="@+id/radioButtonAttendingNo"
+            android:id="@+id/UradioButtonAttendingNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_AttendingNo"
             android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
-            android:id="@+id/radioButtonAttendingUndecided"
+            android:id="@+id/UradioButtonAttendingUndecided"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_AttendingUndecided"
@@ -204,29 +204,24 @@
 
     </RadioGroup>
 
-    <!--<Button-->
-        <!--android:id="@+id/btnDisplay"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="@string/btn_display"-->
-        <!--/>-->
+
 
     <Button
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:id="@+id/Button_OK"
-        android:layout_below="@+id/radioAttending"
+        android:id="@+id/UButton_Update"
+        android:layout_below="@+id/UradioAttending"
         android:layout_marginLeft="20dp"
 
-        android:text="OK"/>
+        android:text="Update"/>
 
     <Button
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:id="@+id/Button_Cancel"
-        android:layout_below="@+id/radioAttending"
+        android:id="@+id/UButton_Cancel"
+        android:layout_below="@+id/UradioAttending"
         android:layout_marginRight="20dp"
-        android:layout_toRightOf="@+id/Button_OK"
+        android:layout_toRightOf="@+id/UButton_Update"
         android:text="Cancel"/>
 
 </RelativeLayout>
