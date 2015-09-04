@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8E4585"
+    android:background="#ffffff"
     >
     
     <Button
@@ -13,8 +13,9 @@
         android:layout_marginTop="20dp"
         android:text=" + New Guest"
         android:textSize="30dp"
+        android:textColor="#ffffff"
         android:id="@+id/button_NewGuest"
-        android:background="#B39EB5"
+        android:background="@drawable/add_guest_button_selector"
         />
 
     <Button
@@ -25,8 +26,9 @@
         android:layout_marginTop="20dp"
         android:text="My Guest List"
         android:textSize="30dp"
+        android:textColor="#ffffff"
         android:id="@+id/button_MyGuestList"
-        android:background="#B39EB5"
+        android:background="@drawable/add_guest_button_selector"
 
         />
 
