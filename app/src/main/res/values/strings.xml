@@ -17,4 +17,8 @@
     <string name="title_activity_delete_guest">DeleteGuest</string>
     <!--<string name="btn_display">Display</string>-->
 
+    <string name="first_name_hint"><font size = "12">First Name</font></string>
+    <string name="last_name_hint"><font size = "12">Last Name</font></string>
+    <string name="table_seat_no_hint"><font size = "12">Table Seat No</font></string>
+
 </resources>
