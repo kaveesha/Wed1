@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by User on 9/5/2015.
+ * Created by kavi on 9/5/2015.
  */
 public class PersonNameValidator {
 

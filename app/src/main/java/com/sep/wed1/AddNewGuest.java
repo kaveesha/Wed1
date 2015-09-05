@@ -55,9 +55,9 @@ public class AddNewGuest extends ActionBarActivity {
         setContentView(R.layout.addnewguest);
 
         final EditText fname = (EditText) findViewById(R.id.editText_Fname);
-        final RadioGroup side = (RadioGroup) findViewById(R.id.radioSide);
-        final RadioGroup invitesent = (RadioGroup) findViewById(R.id.radioInvitesSent);
-        final RadioGroup attending = (RadioGroup) findViewById(R.id.radioAttending);
+//        final RadioGroup side = (RadioGroup) findViewById(R.id.radioSide);
+//        final RadioGroup invitesent = (RadioGroup) findViewById(R.id.radioInvitesSent);
+//        final RadioGroup attending = (RadioGroup) findViewById(R.id.radioAttending);
 
         final EditText lname = (EditText) findViewById(R.id.editText_Lname);
         final EditText tsno = (EditText) findViewById(R.id.editText_SeatNo);
@@ -159,6 +159,7 @@ public class AddNewGuest extends ActionBarActivity {
 
     public void addnewguest() {
 
+        //create arraylist as type of NameValuePair
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 
         nameValuePairs.add(new BasicNameValuePair("firstname", Fname));
@@ -234,8 +235,10 @@ public class AddNewGuest extends ActionBarActivity {
         }
     }
 
-    // Dialog
+
     public class SomeTask extends AsyncTask<Void, Void, Integer> {
+
+        //initialize the progress dialog
         private ProgressDialog Dialog = new ProgressDialog(AddNewGuest.this);
 
         @Override

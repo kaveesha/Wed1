@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:weightSum="100"
+    android:paddingBottom="5dp"
+    android:background="#00000000">
+
+
+    <TextView
+        android:textSize="17sp"
+        android:id="@+id/guestname"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:textColor="#ffffff"
+        android:layout_weight="17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </TextView>
+    <TextView
+        android:textSize="14sp"
+        android:id="@+id/side"
+        android:textColor="#ffffff"
+        android:layout_weight="18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </TextView>
+    <TextView
+        android:textSize="14sp"
+        android:id="@+id/invitessent"
+        android:textColor="#00ff00"
+        android:layout_weight="22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </TextView>
+    <TextView
+        android:textSize="14sp"
+        android:id="@+id/attending"
+        android:textColor="#4169E1"
+        android:layout_weight="22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </TextView>
+    <TextView
+        android:textSize="14sp"
+        android:id="@+id/tbno"
+        android:textColor="#FFD700"
+        android:paddingLeft="10dp"
+        android:layout_weight="21"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </TextView>
+
+</LinearLayout>

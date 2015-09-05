@@ -1,227 +1,588 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.sep.wed1.UpdateGuest"
-    android:background="#CF71AF">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#d3d3d3">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="Guest name"
-        android:textSize="15dp"
-        android:id="@+id/UtextView_GuestName"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:inputType="textPersonName"
-        android:hint="First Name"
-        android:ems="10"
-        android:id="@+id/UeditText_Fname"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_below="@+id/UtextView_GuestName"
-
-        android:background="#FFFFFF"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:inputType="textPersonName"
-        android:hint="Last Name"
-        android:ems="10"
-        android:id="@+id/UeditText_Lname"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/UeditText_Fname"
-        android:background="#FFFFFF"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_below="@+id/UeditText_Lname"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="Table Seat No"
-        android:textSize="15dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/UtextView_SeatNo"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:inputType="textPersonName"
-        android:hint="Table Seat No"
-        android:ems="10"
-        android:id="@+id/UeditText_SeatNo"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="1dp"
-        android:layout_below="@+id/UtextView_SeatNo"
-        android:background="#FFFFFF"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_below="@+id/UeditText_SeatNo"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="Side"
-        android:textSize="15dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/UtextView_Side"
-        />
-
-
-    <RadioGroup
-        android:id="@+id/UradioSide"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/UtextView_Side"
-        android:orientation="horizontal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="1dp">
+        android:fillViewport="true">
 
-        <RadioButton
-            android:id="@+id/UradioBride"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/radio_Bride"
-            android:checked="true"
-            android:onClick="onRadioButtonClicked"/>
+            android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/UradioGroom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_Groom"
-            android:onClick="onRadioButtonClicked"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical">
 
-    </RadioGroup>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:padding="10dp"
+                    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_below="@+id/UradioSide"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="RSVP"
-        android:textSize="15dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/UtextView_RSVP"
-        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Guest Name"
+                        android:textSize="20dp"
+                        android:textColor="#000000"
+                        android:id="@+id/textView_GuestName"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_below="@+id/UtextView_RSVP"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="Invites Sent"
-        android:textSize="15dp"
-        android:layout_marginTop="1dp"
-        android:id="@+id/UtextView_InvitesSent"
-        />
+                </LinearLayout>
 
-    <RadioGroup
-        android:id="@+id/UradioInvitesSent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/UtextView_InvitesSent"
-        android:orientation="horizontal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="1dp">
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="#f1f1f1"/>
 
-        <RadioButton
-            android:id="@+id/UradioButtonInvitesYes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_InvitesYes"
-            android:checked="true"
-            android:onClick="onRadioButtonClicked"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:padding="10dp"
+                    android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/UradioButtonInvitesNo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_InvitesNo"
-            android:onClick="onRadioButtonClicked"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#ffffff">
 
-    </RadioGroup>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:padding="10dp"
+                            android:hint="@string/first_name_hint"
+                            android:id="@+id/UeditText_Fname"
+                            android:background="@drawable/edit_text_selector"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_below="@+id/UradioInvitesSent"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="Attending "
-        android:textSize="15dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/UtextView_Attending"
-        />
+                    </LinearLayout>
 
-    <RadioGroup
-        android:id="@+id/UradioAttending"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/UtextView_Attending"
-        android:orientation="horizontal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="1dp"
-        android:onClick="onRadioButtonClicked">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:background="#ffffff">
 
-        <RadioButton
-            android:id="@+id/UradioButtonAttendingYes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_AttendingYes"
-            android:checked="true"
-            android:onClick="onRadioButtonClicked"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:hint="@string/last_name_hint"
+                            android:padding="10dp"
+                            android:id="@+id/UeditText_Lname"
+                            android:background="@drawable/edit_text_selector"/>
 
-        <RadioButton
-            android:id="@+id/UradioButtonAttendingNo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_AttendingNo"
-            android:onClick="onRadioButtonClicked"/>
+                    </LinearLayout>
 
-        <RadioButton
-            android:id="@+id/UradioButtonAttendingUndecided"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_AttendingUndecided"
-            android:onClick="onRadioButtonClicked"/>
+                </LinearLayout>
 
-    </RadioGroup>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/editText_Lname"
+                        android:text="Table Seat No"
+                        android:textSize="20dp"
+                        android:id="@+id/textView_SeatNo"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="#f1f1f1"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#ffffff">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:padding="10dp"
+                            android:hint="@string/table_seat_no_hint"
+                            android:id="@+id/UeditText_SeatNo"
+                            android:background="@drawable/edit_text_selector"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="#a9a9a9"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="#d3d3d3"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="Side"
+                    android:textSize="15dp"
+                    android:id="@+id/textView_Side"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="#f1f1f1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/UradioSide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_Side"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="1dp">
+
+                    <RadioButton
+                        android:id="@+id/UradioBride"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/radio_Bride"
+                        android:checked="true"
+                       />
+
+                    <RadioButton
+                        android:id="@+id/UradioGroom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="@string/radio_Groom"
+                        />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/textView_RSVP"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Invites Sent"
+                    android:textSize="15dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/textView_InvitesSent"
+                    />
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="#f1f1f1"/>
+
+                <RadioGroup
+                    android:id="@+id/UradioInvitesSent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_InvitesSent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="1dp">
+
+                    <RadioButton
+                        android:id="@+id/UradioButtonInvitesYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/radio_InvitesYes"
+                        android:checked="true"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/UradioButtonInvitesNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="@string/radio_InvitesNo"
+                        />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Attending "
+                    android:textSize="15dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/textView_Attending"/>
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="#f1f1f1"/>
+
+                <RadioGroup
+                    android:id="@+id/UradioAttending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_Attending"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="1dp"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/UradioButtonAttendingYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/radio_AttendingYes"
+                        android:checked="true"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/UradioButtonAttendingNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/radio_AttendingNo"
+                      />
+
+                    <RadioButton
+                        android:id="@+id/UradioButtonAttendingUndecided"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/radio_AttendingUndecided"
+                        />
+
+                </RadioGroup>
+
+            </LinearLayout>
+            <!--<Button-->
+            <!--android:id="@+id/btnDisplay"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/btn_display"-->
+            <!--/>-->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="#a9a9a9"/>
+
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="#d3d3d3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:background="#d3d3d3"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:id="@+id/UButton_Update"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/add_guest_button_selector"
+                    android:text="Update"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:id="@+id/UButton_Cancel"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/add_guest_button_selector"
+                    android:layout_marginLeft="10dp"
+                    android:text="Cancel"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--tools:context="com.sep.wed1.UpdateGuest"-->
+    <!--android:background="#CF71AF">-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:text="Guest name"-->
+        <!--android:textSize="15dp"-->
+        <!--android:id="@+id/UtextView_GuestName"-->
+        <!--/>-->
+
+    <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:inputType="textPersonName"-->
+        <!--android:hint="First Name"-->
+        <!--android:ems="10"-->
+        <!--android:id="@+id/UeditText_Fname"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_below="@+id/UtextView_GuestName"-->
+
+        <!--android:background="#FFFFFF"/>-->
+
+    <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:inputType="textPersonName"-->
+        <!--android:hint="Last Name"-->
+        <!--android:ems="10"-->
+        <!--android:id="@+id/UeditText_Lname"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_below="@+id/UeditText_Fname"-->
+        <!--android:background="#FFFFFF"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_below="@+id/UeditText_Lname"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:text="Table Seat No"-->
+        <!--android:textSize="15dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:id="@+id/UtextView_SeatNo"-->
+        <!--/>-->
+
+    <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:inputType="textPersonName"-->
+        <!--android:hint="Table Seat No"-->
+        <!--android:ems="10"-->
+        <!--android:id="@+id/UeditText_SeatNo"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginTop="1dp"-->
+        <!--android:layout_below="@+id/UtextView_SeatNo"-->
+        <!--android:background="#FFFFFF"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_below="@+id/UeditText_SeatNo"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:text="Side"-->
+        <!--android:textSize="15dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:id="@+id/UtextView_Side"-->
+        <!--/>-->
+
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/UradioSide"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/UtextView_Side"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginTop="1dp">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/UradioBride"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/radio_Bride"-->
+            <!--android:checked="true"-->
+            <!--android:onClick="onRadioButtonClicked"/>-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/UradioGroom"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/radio_Groom"-->
+            <!--android:onClick="onRadioButtonClicked"/>-->
+
+    <!--</RadioGroup>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_below="@+id/UradioSide"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:text="RSVP"-->
+        <!--android:textSize="15dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:id="@+id/UtextView_RSVP"-->
+        <!--/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_below="@+id/UtextView_RSVP"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:text="Invites Sent"-->
+        <!--android:textSize="15dp"-->
+        <!--android:layout_marginTop="1dp"-->
+        <!--android:id="@+id/UtextView_InvitesSent"-->
+        <!--/>-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/UradioInvitesSent"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/UtextView_InvitesSent"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginTop="1dp">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/UradioButtonInvitesYes"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/radio_InvitesYes"-->
+            <!--android:checked="true"-->
+            <!--android:onClick="onRadioButtonClicked"/>-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/UradioButtonInvitesNo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/radio_InvitesNo"-->
+            <!--android:onClick="onRadioButtonClicked"/>-->
+
+    <!--</RadioGroup>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_below="@+id/UradioInvitesSent"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:text="Attending "-->
+        <!--android:textSize="15dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:id="@+id/UtextView_Attending"-->
+        <!--/>-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/UradioAttending"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/UtextView_Attending"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginTop="1dp"-->
+        <!--android:onClick="onRadioButtonClicked">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/UradioButtonAttendingYes"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/radio_AttendingYes"-->
+            <!--android:checked="true"-->
+            <!--android:onClick="onRadioButtonClicked"/>-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/UradioButtonAttendingNo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/radio_AttendingNo"-->
+            <!--android:onClick="onRadioButtonClicked"/>-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/UradioButtonAttendingUndecided"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/radio_AttendingUndecided"-->
+            <!--android:onClick="onRadioButtonClicked"/>-->
+
+    <!--</RadioGroup>-->
 
 
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:id="@+id/UButton_Update"
-        android:layout_below="@+id/UradioAttending"
-        android:layout_marginLeft="20dp"
+    <!--<Button-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:id="@+id/UButton_Update"-->
+        <!--android:layout_below="@+id/UradioAttending"-->
+        <!--android:layout_marginLeft="20dp"-->
 
-        android:text="Update"/>
+        <!--android:text="Update"/>-->
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:id="@+id/UButton_Cancel"
-        android:layout_below="@+id/UradioAttending"
-        android:layout_marginRight="20dp"
-        android:layout_toRightOf="@+id/UButton_Update"
-        android:text="Cancel"/>
+    <!--<Button-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:id="@+id/UButton_Cancel"-->
+        <!--android:layout_below="@+id/UradioAttending"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_toRightOf="@+id/UButton_Update"-->
+        <!--android:text="Cancel"/>-->
 
-</RelativeLayout>
+<!--</RelativeLayout>-->

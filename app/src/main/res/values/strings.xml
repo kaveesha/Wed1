@@ -19,6 +19,7 @@
 
     <string name="first_name_hint"><font size = "12">First Name</font></string>
     <string name="last_name_hint"><font size = "12">Last Name</font><font size = "11">\t( Optional )</font></string>
+    <string name="search_guest_hint"><font size = "12" color = "#ffffff">Search Guest..</font></string>
     <string name="table_seat_no_hint"><font size = "12">Table Seat No</font></string>
 
 </resources>

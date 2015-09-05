@@ -21,16 +21,8 @@
         <activity android:name=".Main" />
         <activity android:name=".AddNewGuest" />
         <activity
-            android:name=".UpdateGuest"
-            android:label="@string/title_activity_update_guest" >
-        </activity>
-        <activity
-            android:name=".MyGuestList"
+            android:name=".Guest_activity"
             android:label="@string/title_activity_my_guest_list" >
-        </activity>
-        <activity
-            android:name=".DeleteGuest"
-            android:label="@string/title_activity_delete_guest" >
         </activity>
     </application>
 

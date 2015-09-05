@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    android:background="#f1f1f1">
+    android:background="#d3d3d3">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -143,12 +143,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="fill_parent"
                 android:layout_height="2dip"
-                android:background="#d3d3d3"/>
+                android:background="#a9a9a9"/>
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="2dip"
-                android:background="#f1f1f1"/>
+                android:background="#d3d3d3"/>
 
        </LinearLayout>
 
@@ -164,9 +164,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginLeft="5dp"
                 android:text="Side"
-                android:textSize="20dp"
-                android:textColor="#000000"
+                android:textSize="15dp"
                 android:id="@+id/textView_Side"/>
 
             </LinearLayout>
@@ -212,24 +212,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:layout_below="@+id/radioSide"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:text="RSVP"
-                android:textSize="15dp"
-                android:layout_marginTop="20dp"
-                android:id="@+id/textView_RSVP"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
                 android:layout_below="@+id/textView_RSVP"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
                 android:text="Invites Sent"
                 android:textSize="15dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="20dp"
                 android:id="@+id/textView_InvitesSent"
                 />
 
@@ -328,19 +316,19 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="2dip"
-                android:background="#d3d3d3"/>
+                android:background="#a9a9a9"/>
 
             <TextView
                 android:layout_marginBottom="5dp"
                 android:layout_width="fill_parent"
                 android:layout_height="2dip"
-                android:background="#f1f1f1"/>
+                android:background="#d3d3d3"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
-                android:background="#f1f1f1"
+                android:background="#d3d3d3"
                 android:orientation="horizontal">
 
                 <Button

@@ -30,7 +30,13 @@ public class Main extends ActionBarActivity
                 startActivity(i);
             }
         });
-
+        GuestList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(Main.this,Guest_activity.class);
+                startActivity(i);
+            }
+        });
 
 
     }
