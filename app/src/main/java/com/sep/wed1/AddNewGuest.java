@@ -14,6 +14,10 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.sep.wed1.Validators.PersonNameValidator;
+import com.sep.wed1.Validators.RequiredFieldValidator;
+import com.sep.wed1.Validators.SeatNumberValidator;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -70,7 +74,32 @@ public class AddNewGuest extends ActionBarActivity {
                 Lname = lname.getText().toString();
                 Tableseatno = tsno.getText().toString();
 
-               new SomeTask().execute();
+                boolean isValid = true;
+                if (RequiredFieldValidator.isEmpty(Fname))
+                {
+                    fname.setError("Please enter your First Name");
+                    isValid = false;
+                }
+
+                if (!PersonNameValidator.isNameValid(Fname)) {
+                    fname.setError("Please enter a valid Name");
+                    isValid = false;
+                }
+
+                if (!SeatNumberValidator.isSeatNoValid(Tableseatno))
+                {
+                    tsno.setError("Please enter a valid Seat Number");
+                    isValid = false;
+                }
+
+                if (!PersonNameValidator.isNameValid(Lname)) {
+                    lname.setError("Please enter a valid Name");
+                    isValid = false;
+                }
+
+                if(isValid) {
+                    new SomeTask().execute();
+                }
 
             }
         });
